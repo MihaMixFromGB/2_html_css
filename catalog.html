@@ -39,11 +39,38 @@
             </div>
         </section>
         <section class="products-catalog container">
-            <div class="products-toolbar container">
-                <div class="products-toolbar-item">
-                    <p class="text products-filter-text">FILTER</p>
-                    <img src="./images/filter.svg" alt="filter">
-                </div>
+            <div class="products-toolbar">
+                <details class="products__filter text">
+                    <summary>FILTER
+                        <svg>
+                            <use xlink:href="#filter" />
+                        </svg>
+                    </summary>
+                    <div class="products__filter__content">
+                        <details class="products__filter__title">
+                            <summary>CATEGORY</summary>
+                            <ul class="products__filter__list">
+                                <li class="products__filter__item">Accessories</li>
+                                <li class="products__filter__item">Bags</li>
+                                <li class="products__filter__item">Denim</li>
+                                <li class="products__filter__item">Hoodies & Sweatshirts</li>
+                                <li class="products__filter__item">Jackets & Coats</li>
+                                <li class="products__filter__item">Polos</li>
+                                <li class="products__filter__item">Shirts</li>
+                                <li class="products__filter__item">Shoes</li>
+                                <li class="products__filter__item">Sweaters & Knits</li>
+                                <li class="products__filter__item">T-Shirts</li>
+                                <li class="products__filter__item">Tanks</li>
+                            </ul>
+                        </details>
+                        <details class="products__filter__title">
+                            <summary>BRAND</summary>
+                        </details>
+                        <details class="products__filter__title">
+                            <summary>DESIGNER</summary>
+                        </details>
+                    </div>
+                </details>
                 <div class="products-toolbar-sort products-toolbar-margin">
                     <div class="products-toolbar-item">
                         <p class="text products-sort-text">TRENDING NOW</p>
@@ -53,6 +80,17 @@
                         <p class="text products-sort-text">SIZE</p>
                         <i class="fas fa-angle-down"></i>
                     </div>
+                    <!-- <details class="products__size text">
+                        <summary>SIZE</summary>
+                        <div class="products__size__container">
+                            <ul class="products__size__list">
+                                <li class="products__size__item"><input type="checkbox" id="xs"><label for="xs">XS</label></li>
+                                <li class="products__size__item"><input type="checkbox" id="s"><label for="s">S</label></li>
+                                <li class="products__size__item"><input type="checkbox" id="m"><label for="m">M</label></li>
+                                <li class="products__size__item"><input type="checkbox" id="l"><label for="l">L</label></li>
+                            </ul>
+                        </div>
+                    </details> -->
                     <div class="products-toolbar-item">
                         <p class="text products-sort-text">PRICE</p>
                         <i class="fas fa-angle-down"></i>
@@ -267,8 +305,8 @@
                 <form class="subscribe-form">
                     <h2 class="text subscribe-form-header">SUBSCRIBE</h2>
                     <p class="text subscribe-form-text">FOR OUR NEWLETTER AND PROMOTION</p>
-                    <input class="subscribe-form-email" type="email" placeholder="Enter Your Email"
-                            required pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+                    <input class="subscribe-form-email" type="email" placeholder="Enter Your Email" required
+                        pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
                     <input class="subscribe-form-btn" type="submit" value="Subscribe">
                 </form>
             </div>
@@ -293,6 +331,13 @@
             </div>
         </div>
     </footer>
+
+    <svg display="none">
+        <symbol width="15" height="10" viewBox="0 0 15 10" xmlns="http://www.w3.org/2000/svg" id="filter">
+            <path
+                d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
+        </symbol>
+    </svg>
 </body>
 
 </html>

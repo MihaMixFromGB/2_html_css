@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>cart</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__box container">
+            <div>
+                <a class="header__logo--margin" href="#">
+                    <img src="./images/logo.png" alt="logo">
+                </a>
+                <img src="./images/search.svg" alt="search">
+            </div>
+            <div>
+                <img class="header__toolbar" src="./images/menu.svg" alt="menu">
+                <img class="header__toolbar" src="./images/lk.svg" alt="lk">
+                <img class="header__toolbar" src="./images/cart_5.svg" alt="cart">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="title-path">
+            <div class="title-path__box container">
+                <h1>REGISTRATION</h1>
+            </div>
+        </section>
+        <section class="registration container">
+            <form>
+                <h3>Your Name</h3>
+                <input type="text" required placeholder="First Name">
+                <input type="text" required placeholder="Last Name">
+                <div class="radioGroup">
+                    <input type="radio" id="male" name="sex" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="sex" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <h3>Login details</h3>
+                <input type="email" required placeholder="Email">
+                <input type="password" placeholder="Password">
+                <p>Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+                <button type="submit" class="btn btn-pink-fill">
+                    JOIN NOW <span>&rarr;</span>
+                </button>
+            </form>
+            <article>
+                <header>LOYALTY HAS ITS PERKS</header>
+                <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these as soon as you join:</p>
+                <ul>
+                    <li>15% off welcome offer</li>
+                    <li>Free shipping, returns and exchanges on all orders</li>
+                    <li>$10 off a purchase on your birthday</li>
+                    <li>Early access to products</li>
+                    <li>Exclusive offers & rewards</li>
+                </ul>
+            </article>
+        </section>
+        <section class="subscribe">
+            <div class="subscribe__box container">
+                <div class="subscribe__info">
+                    <img src="./images/subscribe_photo.png" alt="photo">
+                    <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
+                            class="text-italic">a pulvinar purus condimentum</span>“</p>
+                </div>
+                <form class="subscribe__form">
+                    <h2>SUBSCRIBE</h2>
+                    <p>FOR OUR NEWLETTER AND PROMOTION</p>
+                    <input class="subscribe__form__email" type="email" placeholder="Enter Your Email"
+                            required pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+                    <input class="subscribe__form__submit" type="submit" value="Subscribe">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__box container">
+            <p class="footer__copyright">&copy; 2021 Brand All Rights Reserved.</p>
+            <div class="footer__social">
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#" class="footer__social__link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

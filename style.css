@@ -448,9 +448,93 @@
       margin-bottom: 96px;
   }
   .products-toolbar {
+    position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
+    /* ---------------- */
+    /* STYLE FOR FILTER */
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  .products__filter {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 360px;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  .products__filter > summary > svg {
+      width: 15px;
+      height: 10px;
+      margin-left: 11px;
+  }
+  .products__filter[open] {
+    border: 1px solid #EBEBEB;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    color: #EF5B70;
+  }
+  .products__filter[open] > summary > svg {
+    fill: #EF5B70;
+  }
+  .products__filter__title {
+      margin-top: 16px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #6F6E6E;
+  }
+  .products__filter__title > summary {
+      padding: 10px 0 10px 10px;
+      border-left: 5px solid #EF5B70;
+      border-bottom: 1px solid #EBEBEB;
+  }
+  .products__filter__title[open] > summary {
+      color: #EF5B70;
+  }
+  .products__filter__list {
+      list-style-type: none;
+      padding-left: 15px;
+      margin-top: 24px;
+  }
+  .products__filter__item {
+      margin-top: 11px;
+      margin-bottom: 11px;
+  }
+    /* STYLE FOR FILTER */
+    /* ---------------- */
+
+    /* ---------------- */
+    /* STYLE FOR SIZE-FILTER */
+    /* .products__size {
+        position: relative;
+    }
+    .products__size__container {
+        position: absolute;
+        z-index: 2;
+        padding: 10px;
+        min-width: 80px;
+    }
+    .products__size__list {
+        list-style-type: none;
+    }
+    .products__size__item input {
+        display: inline-block;
+        border: 1px solid #EBEBEB;
+        margin-right: 9px;
+    } */
+
+    /* STYLE FOR SIZE-FILTER */
+    /* ---------------- */
+
   .products-toolbar-item {
     display: flex;
     align-items: center;
@@ -459,19 +543,10 @@
   .products-toolbar-item:not(:last-child) {
       margin-right: 28px;
   }
-  .products-filter-text {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-    margin: 0 10px;
-  }
   .products-toolbar-sort {
     display: flex;
     justify-content: space-between;
-  }
-  .products-toolbar-margin {
-    margin-left: 337px;
+    padding-top: 16px;
   }
   .products-sort-text {
     font-weight: normal;

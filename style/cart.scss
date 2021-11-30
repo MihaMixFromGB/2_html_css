@@ -1,0 +1,165 @@
+@import '../module/general';
+@import '../module/header';
+@import '../module/titlePath';
+@import '../module/subscribe';
+@import '../module/footer';
+
+@mixin input-text {
+    @include text;
+    padding: 15px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+    margin-bottom: 128px;
+    &__products {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__card {
+            display: flex;
+            justify-content: flex-start;
+            max-width: 652px;
+            max-height: 306px;
+            box-shadow: 17px 19px 24px rgba(39, 2, 2, 0.13);
+            &:not(:nth-last-child(-n+2)) {
+                margin-bottom: 40px;
+            }
+            & img {
+                height: 100%;
+                width: auto;
+            }
+            &__info {
+                margin-top: 22px;
+                margin-left: 31px;
+                max-width: 210px;
+                & h3 {
+                    @include text;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #222222;
+                    margin-bottom: 42px;
+                }
+                & p {
+                    @include text;
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: #575757;
+                    margin-bottom: 6px;
+                }
+                & label {
+                    @include text;
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: #575757;
+                }
+                & input {
+                    height: 25px;
+                    width: 44px;
+                    text-align: center;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #656565;
+                    border: 1px solid #EAEAEA;
+                    margin-left: 24px;
+                }
+            }
+            &__close {
+                margin: 28px 22px 0 auto;
+                font-size: 24px;
+            }
+        }
+        &__btn {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 72px;
+        }
+    }
+    &__order {
+        display: flex;
+        flex-direction: column;
+        &__shipping {
+            width: 360px;
+            & h3 {
+                @include text;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #222222;
+            }
+            & input {
+                margin-top: 20px;
+                border: 1px solid #A4A4A4;
+                background-color: white;
+            }
+            & input[type='text'] {
+                @include input-text;
+                width: 100%;
+                color: #B1B1B1;
+                &::placeholder {
+                    @include input-text;
+                    padding-left: 0;
+                    color: #222222;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            & input[type='button'] {
+                cursor: pointer;
+                @include text;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 13px;
+                color: #4A4A4A;
+                padding: 10px 15px;
+            }
+        }
+        &__submit {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            background-color: #F5F3F3;
+            margin-top: 57px;
+            padding: 40px;
+            &__sub {
+                @include text;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 13px;
+                color: #4A4A4A;
+                margin-bottom: 12px;
+                & span {
+                    margin-left: 20px;
+                }
+            }
+            &__grand {
+                @include text;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                color: #222222;
+                & span {
+                    margin-left: 20px;
+                }
+            }
+            &__divider {
+                margin: 20px 0;
+                width: 100%;
+                border-top: 1px solid #E2E2E2;
+            }
+            & input {
+                width: 100%;
+            }
+        }
+    }
+}

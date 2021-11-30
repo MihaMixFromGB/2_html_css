@@ -1,0 +1,106 @@
+@import '../module/general';
+@import '../module/header';
+@import '../module/titlePath';
+@import '../module/subscribe';
+@import '../module/footer';
+
+@mixin input-text {
+    @include text;
+    padding: 15px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.registration {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 96px;
+
+    & form {
+        width: 360px;
+        & h3 {
+            @include text;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+        }
+        & input:not([type=radio]) {
+            @include input-text;
+            margin-top: 20px;
+            border: 1px solid #A4A4A4;
+            background-color: white;
+            width: 100%;
+            box-sizing: border-box;
+            color: #222222;
+            &::placeholder {
+                @include input-text;
+                padding-left: 0;
+                color: #B1B1B1;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        & .radioGroup {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            & label {
+                @include text;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 13px;
+                color: #000000;
+                margin-left: 10px;
+            }
+            & input:not(:first-child) {
+                margin-left: 20px;
+            }
+        }
+        & p {
+            @include text;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+            margin-top: 15px;
+        }
+        & button {
+            margin-top: 40px;
+            & span {
+                margin-left: 20px;
+            }
+        }
+    }
+    & article {
+        max-width: 652px;
+        margin-left: 128px;
+        & header {
+            @include text;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+        }
+        & p, ul > li {
+            @include text;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+        }
+        & p {
+            margin: 22px 0;
+        }
+        & ul > li {
+            margin: 16px 0 16px 20px;
+            padding-left: 22px;
+            &::marker {
+                content: url('../images/marker.svg');
+            }
+        }
+    }
+}

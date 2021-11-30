@@ -1,0 +1,87 @@
+@import 'general';
+
+.subscribe {
+    height: 448px;
+    background:
+        linear-gradient(
+            rgba(244, 244, 244, 0.7), 
+            rgba(244, 244, 244, 0.7)
+        ),
+        url('../images/subscribe_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25%;
+    &__box {
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info {
+        max-width: 360px;
+        text-align: center; // <-- семантически неверное выравнивание
+        & p {
+            @include text;
+            margin-top: 30px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #222224;
+        }
+    }
+    &__form {
+        min-width: 557px;
+        text-align: center;
+        & h2 {
+            @include text;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 167.2%;
+            text-align: center;
+            color: #222224;
+        }
+        & p {
+            @include text;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 125.4%;
+            text-align: center;
+            color: #222224;
+            margin-bottom: 32px;
+        }
+        &__email {
+            width: 256px;
+            height: 49px;
+            background: #E1E1E1;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            padding-left: 22px;
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                align-items: center;
+                color: #222224;
+                opacity: 0.67;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &__submit {
+            width: 100px;
+            height: 49px;
+            background: #F16D7F;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            margin-left: -4px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+}
