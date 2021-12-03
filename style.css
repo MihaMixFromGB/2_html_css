@@ -174,7 +174,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 48px 0;
+    margin: 64px 0 48px;
 }
 .products-item {
     position: relative;
@@ -420,6 +420,25 @@
      color: #fff;
      background-color: #F16D7F;
   }
+
+  /* ---------------- */
+  /* ANIMATION */
+  .products-item {
+      transition: 1s;
+  }
+  .products-item:hover {
+    transform: scale(1.05);
+  }
+  .products-btn-text {
+      transition: 0.5s;
+  }
+  .products-btn-text:hover {
+      transform: rotate(360deg);
+  }
+
+  /* ANIMATION */
+  /* ---------------- */
+
   /* STYLE FOR CATALOG.HTML */
   .cat-title {
     height: 148px;
@@ -514,23 +533,53 @@
 
     /* ---------------- */
     /* STYLE FOR SIZE-FILTER */
-    /* .products__size {
+    /* !!! ЗАМЕНИТЬ НАИМЕНОВАНИЕ SIZE !!! */
+    .products__size:not(:last-child) {
+        margin-right: 28px;
+    }
+    .products__size {
         position: relative;
+    }
+    .products__size > summary {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+    }
+    .products__size > summary > svg {
+        width: 11px;
+        height: 6px;
+        margin-left: 10px;
+        fill: #6F6E6E;
     }
     .products__size__container {
         position: absolute;
+        top: 22px;
+        left: -10px;
         z-index: 2;
         padding: 10px;
         min-width: 80px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
     }
     .products__size__list {
         list-style-type: none;
     }
+    .products__size__item {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #6F6E6E;
+    }
+    .products__size__item:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
     .products__size__item input {
-        display: inline-block;
-        border: 1px solid #EBEBEB;
+        /* border: 1px solid #EBEBEB; */
         margin-right: 9px;
-    } */
+    }
 
     /* STYLE FOR SIZE-FILTER */
     /* ---------------- */
