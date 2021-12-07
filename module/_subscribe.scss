@@ -85,3 +85,53 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .subscribe {
+        height: 693px;
+        &__box {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__info {
+            margin-top: 64px;
+        }
+        &__form {
+            flex-grow: 1;
+            margin-top: 48px;
+            & p {
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
+@media (max-width: 667px) {
+    .subscribe {
+        height: 550px;
+        &__info {
+            & p {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+        &__form {
+            min-width: 1px;
+            margin-top: 60px;
+            & h2 {
+                font-size: 24px;
+                line-height: 153.2%;
+            }
+            & p {
+                font-size: 14px;
+                line-height: 89.4%;
+                margin-bottom: 22px;
+            }
+            &__email {
+                width: 230px;
+            }
+            &__submit {
+                width: 96px;
+            }
+        }
+    }
+}

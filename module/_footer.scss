@@ -40,3 +40,22 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .footer {
+        &__box {
+            margin: 0 32px;
+        }
+    }
+}
+@media (max-width: 667px) {
+    .footer {
+        height: 143px;
+        padding-top: 43px;
+        padding-bottom: 9px;
+        box-sizing: border-box;
+        &__box {
+            flex-direction: column-reverse;
+        }
+    }
+}

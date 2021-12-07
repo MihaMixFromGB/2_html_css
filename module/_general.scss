@@ -23,6 +23,9 @@
 .price {
     color: #EF5B70;
 }
+.text-color {
+    color: #F16D7F;
+}
 // ТЕКСТ
 // ----------------------
 
@@ -39,6 +42,14 @@
     text-decoration: none;
     border: none;
 }
+.btn-pink {
+    color: #F26376;
+    border: 1px solid #FF6A6A;
+}
+.btn-pink:hover {
+    color: #FFFFFF;
+    background: #F26376;
+}
 .btn-grey {
     color: #000000;
     border: 1px solid #A4A4A4;
@@ -49,3 +60,9 @@
 }
 // КНОПКИ
 // ----------------------
+
+@media (max-width: 1024px) {
+   .container {
+       padding: 0;
+   }
+}
