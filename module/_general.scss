@@ -64,5 +64,12 @@
 @media (max-width: 1024px) {
    .container {
        padding: 0;
+       max-width: 736px;
    }
 }
+
+@media (max-width: 667px) {
+    .container {
+        max-width: 360px;
+    }
+ }

@@ -63,6 +63,13 @@
 @media (max-width: 1024px) {
   .container {
     padding: 0;
+    max-width: 736px;
+  }
+}
+
+@media (max-width: 667px) {
+  .container {
+    max-width: 360px;
   }
 }
 
@@ -174,6 +181,13 @@
 @media (max-width: 1024px) {
   .container {
     padding: 0;
+    max-width: 736px;
+  }
+}
+
+@media (max-width: 667px) {
+  .container {
+    max-width: 360px;
   }
 }
 
@@ -210,6 +224,26 @@
   font-size: 14px;
   line-height: 17px;
   color: #636363;
+}
+
+@media (max-width: 1024px) {
+  .title-path {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 667px) {
+  .title-path__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .title-path p {
+    display: block;
+    margin-top: 32px;
+  }
 }
 
 * {
@@ -277,6 +311,13 @@
 @media (max-width: 1024px) {
   .container {
     padding: 0;
+    max-width: 736px;
+  }
+}
+
+@media (max-width: 667px) {
+  .container {
+    max-width: 360px;
   }
 }
 
@@ -536,6 +577,13 @@
 @media (max-width: 1024px) {
   .container {
     padding: 0;
+    max-width: 736px;
+  }
+}
+
+@media (max-width: 667px) {
+  .container {
+    max-width: 360px;
   }
 }
 

@@ -1,5 +1,6 @@
 @import '../module/general';
 @import '../module/header';
+@import '../module/features';
 @import '../module/subscribe';
 @import '../module/footer';
 
@@ -21,6 +22,7 @@
     width: 100%;
     background: #F1E4E6;
     &__box {
+        position: relative;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -44,6 +46,65 @@
                 font-weight: 700;
                 font-size: 32px;
                 line-height: 38px;
+            }
+        }
+    }
+    &__menu {
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        width: 232px;
+        height: 100%;
+        background-color: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        overflow-y: scroll;
+        &__close {
+            margin: 16px 16px 9px auto;
+            width: 12px;
+            height: 12px;
+            & > span {
+                display: block;
+                width: 16px;
+                border-bottom: 2px solid #6F6E6E;
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(0, 1.5px);
+                }
+                &:nth-child(2) {
+                    transform: rotate(-45deg) translate(0, -1.5px);
+                }
+            }
+        }
+        &__box{
+            margin-left: 34px;
+            @include text;
+            & > h2 {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 24px;
+            }
+            & > h3 {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #F16D7F;
+                margin-bottom: 12px;
+            }
+            & > ul {
+                margin-left: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            & > ul > li {
+                list-style-type: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #6F6E6E;
+                &:not(:last-child) {
+                    margin-bottom: 11px;
+                }
             }
         }
     }
@@ -204,42 +265,6 @@
     }
 }
 
-.features {
-    width: 100%;
-    height: 341px;
-    background: #222224;
-    &__box {
-        display: flex;
-        height: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__item {
-        max-width: 360px;
-        text-align: center;
-        box-sizing: border-box;
-        padding: 0 25px;
-        @include text;
-        & > div {
-            height: 50px;
-        }
-        & > h3 {
-            font-weight: 400;
-            font-size: 19.96px;
-            line-height: 24px;
-            color: #FBFBFB;
-            margin: 28px 0 16px;
-        }
-        & > p {
-            font-weight: 300;
-            font-size: 13.972px;
-            line-height: 17px;
-            text-align: center;
-            color: #FBFBFB;
-        }
-    }
-}
-
 @media (max-width: 1024px) {
     .title {
         min-height: 368px;
@@ -254,6 +279,15 @@
                 & > span {
                     font-size: 24px;
                     line-height: 29px;
+                }
+            }
+        }
+        &__menu {
+            &__box {
+                & > ul{
+                    &:last-child {
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
@@ -280,16 +314,6 @@
         &__box {
             margin: 74px 0 32px;
             gap: 16px;
-        }
-    }
-    .features {
-        height: 610px;
-        padding-top: 23px;
-        padding-bottom: 39px;
-        box-sizing: border-box;
-        &__box {
-            flex-direction: column;
-            justify-content: center;
         }
     }
 }
@@ -329,9 +353,6 @@
     .products {
         margin: 64px 8px 96px;
         &__box {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
             margin: 64px 0 41px;
         }
 
