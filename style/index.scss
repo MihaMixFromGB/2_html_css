@@ -17,20 +17,18 @@
 };
 
 .title {
-    height: 1px;
-    min-height: 764px;
+    height: calc(100vh - 80px);
     width: 100%;
     background: #F1E4E6;
     &__box {
-        position: relative;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         height: 100%;
         background-image: url('../images/top_image.png');
         background-repeat: no-repeat;
-        background-position: -228px;
         background-size: auto 100%;
+        background-position: left;
     }
     &__caption {
         border-left: 12px solid #F16D7F;
@@ -49,72 +47,13 @@
             }
         }
     }
-    &__menu {
-        position: absolute;
-        right: 0;
-        z-index: 2;
-        width: 232px;
-        height: 100%;
-        background-color: #FFFFFF;
-        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-        overflow-y: scroll;
-        &__close {
-            margin: 16px 16px 9px auto;
-            width: 12px;
-            height: 12px;
-            & > span {
-                display: block;
-                width: 16px;
-                border-bottom: 2px solid #6F6E6E;
-                &:nth-child(1) {
-                    transform: rotate(45deg) translate(0, 1.5px);
-                }
-                &:nth-child(2) {
-                    transform: rotate(-45deg) translate(0, -1.5px);
-                }
-            }
-        }
-        &__box{
-            margin-left: 34px;
-            @include text;
-            & > h2 {
-                font-weight: bold;
-                font-size: 14px;
-                line-height: 17px;
-                margin-bottom: 24px;
-            }
-            & > h3 {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 17px;
-                color: #F16D7F;
-                margin-bottom: 12px;
-            }
-            & > ul {
-                margin-left: 20px;
-                &:not(:last-child) {
-                    margin-bottom: 20px;
-                }
-            }
-            & > ul > li {
-                list-style-type: none;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 17px;
-                color: #6F6E6E;
-                &:not(:last-child) {
-                    margin-bottom: 11px;
-                }
-            }
-        }
-    }
 }
 
 .catalog {
     margin-top: 65px;
     &__box {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 30px;
     }
@@ -293,7 +232,7 @@
         }
     }
     .catalog {
-        margin: 20px 16px 0;
+        margin: 20px auto 16px;
         &__box {
             gap: 20px;
         }
@@ -305,7 +244,7 @@
         }
     }
     .products {
-        margin: 155px 16px 65px;
+        margin: 155px auto 65px;
         & > header {
             & > h2 {
                 margin-bottom: 3px;

@@ -1,5 +1,6 @@
 @import '../module/general';
 @import '../module/header';
+@import '../module/header_menu_full';
 @import '../module/titlePath';
 @import '../module/subscribe';
 @import '../module/footer';
@@ -12,6 +13,13 @@
     line-height: 16px;
 }
 
+.header {
+    &__menu {
+        &__box {
+            height: auto;
+        }
+    }
+}
 .registration {
     display: flex;
     justify-content: space-between;
@@ -101,6 +109,34 @@
             &::marker {
                 content: url('../images/marker.svg');
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .registration {
+        margin-top: 40px;
+        & article {
+            max-width: 354px;
+            margin-left: 22px;
+            & header {
+                font-size: 16px;
+                line-height: 19px;
+            }
+            & p, ul > li {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+}
+
+@media (max-width: 667px) {
+    .registration {
+        flex-direction: column;
+        & article {
+            margin-top: 40px;
+            margin-left: 0;
         }
     }
 }

@@ -1,5 +1,6 @@
 @import '../module/general';
 @import '../module/header';
+@import '../module/header_menu_full';
 @import '../module/titlePath';
 @import '../module/features';
 @import '../module/subscribe';
@@ -230,8 +231,6 @@
         &__toolbar {
             justify-content: flex-end;
             margin-right: 16px;
-            // max-width: 736px;
-            // margin: 0 auto;
         }
         &__box {
             gap: 16px;
@@ -248,8 +247,6 @@
 @media (max-width: 667px) {
     .products {
         &__toolbar {
-            max-width: 360px;
-            margin: 0 auto;
             &__filter {
                 & > summary {
                     & > span {

@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     background-color: #222222;
     padding: 19px 0;
     &__box {
@@ -10,8 +11,82 @@
         margin-right: 41px;
     }
     &__toolbar {
-        &:not(:last-child) {
-            margin-right: 33px;
+        display: flex;
+        &__item {
+            &:not(:last-child) {
+                margin-right: 33px;
+            }
+        }
+    }
+    &__menu {
+        font-size: 32px;
+        color: #E8E8E8;
+        & > label {
+            cursor: pointer;
+        }
+        & > input {
+            display: none;
+            &:checked ~ &__box {
+                display: block;
+            }
+            &:not(:checked) ~ .header__menu__box {
+                display: none;
+            }
+        }
+        &__box {
+            position: absolute;
+            top: 81px;
+            right: 0;
+            height: calc(100vh - 81px);
+            width: 232px;
+            z-index: 2;
+            padding: 16px 16px 16px 34px;
+            box-sizing: border-box;
+            background-color: #FFFFFF;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            overflow-y: scroll;
+        }
+        &__close {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 14px;
+            color: #6F6E6E;
+            & > label {
+                cursor: pointer;
+            }
+        }
+        &__content {
+            @include text;
+            & > h2 {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+                margin-bottom: 24px;
+            }
+            & > h3 {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #F16D7F;
+                margin-bottom: 12px;
+            }
+            & > ul {
+                margin-left: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            & > ul > li {
+                list-style-type: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #6F6E6E;
+                &:not(:last-child) {
+                    margin-bottom: 11px;
+                }
+            }
         }
     }
 }
@@ -27,11 +102,13 @@
             padding: 19px 16px;
         }
         &__toolbar {
-            &:not(:first-child) {
-                display: none;
-            }
-            &:first-child {
-                margin: 0;
+            &__item {
+                &:not(:first-child) {
+                    display: none;
+                }
+                &:first-child {
+                    margin: 0;
+                }
             }
         }
     }

@@ -1,5 +1,6 @@
 @import '../module/general';
 @import '../module/header';
+@import '../module/header_menu_full';
 @import '../module/titlePath';
 @import '../module/subscribe';
 @import '../module/footer';
@@ -12,6 +13,13 @@
     line-height: 16px;
 }
 
+.header {
+    &__menu {
+        &__box {
+            height: auto;
+        }
+    }
+}
 .cart {
     display: flex;
     justify-content: space-between;
@@ -24,8 +32,8 @@
         &__card {
             display: flex;
             justify-content: flex-start;
-            max-width: 652px;
-            max-height: 306px;
+            width: 652px;
+            height: 306px;
             box-shadow: 17px 19px 24px rgba(39, 2, 2, 0.13);
             &:not(:nth-last-child(-n+2)) {
                 margin-bottom: 40px;
@@ -46,20 +54,15 @@
                     color: #222222;
                     margin-bottom: 42px;
                 }
-                & p {
+                & p, label {
                     @include text;
                     font-weight: 400;
                     font-size: 22px;
                     line-height: 26px;
                     color: #575757;
-                    margin-bottom: 6px;
                 }
-                & label {
-                    @include text;
-                    font-weight: 400;
-                    font-size: 22px;
-                    line-height: 26px;
-                    color: #575757;
+                & p {
+                    margin-bottom: 6px;
                 }
                 & input {
                     height: 25px;
@@ -98,6 +101,7 @@
             }
             & input {
                 margin-top: 20px;
+                box-sizing: border-box;
                 border: 1px solid #A4A4A4;
                 background-color: white;
             }
@@ -157,8 +161,113 @@
                 width: 100%;
                 border-top: 1px solid #E2E2E2;
             }
-            & input {
+            & > input {
                 width: 100%;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .cart {
+        flex-direction: column;
+        margin-top: 60px;
+        &__products {
+            flex-direction: column;
+            margin-bottom: 64px;
+            &__card {
+                width: 100%;
+                height: 306px;
+            }
+            &__btn {
+                justify-content: center;
+                margin-top: 62px;
+                & > input {
+                    margin-right: 48px;
+                }
+            }
+        }
+        &__order {
+            flex-direction: row;
+            justify-content: space-between;
+            &__submit {
+                margin-top: 37px;
+                padding: 40px 44px;
+            }
+        }
+    }
+}
+
+@media (max-width: 667px) {
+    .cart {
+        margin-top: 40px;
+        margin-bottom: 96px;
+        &__products {
+            &__card {
+                height: 188px;
+                &:not(:nth-last-child(-n+2)) {
+                    margin-bottom: 32px;
+                }
+                &__info {
+                    margin-top: 13px;
+                    margin-left: 17px;
+                    max-width: 130px;
+                    & h3 {
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-bottom: 26px;
+                    }
+                    & p, label {
+                        font-size: 14px;
+                        line-height: 16px;
+                        
+                    }
+                    & p {
+                        margin-bottom: 4px;
+                    }
+                    & input {
+                        height: 15px;
+                        width: 24px;
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
+                }
+                &__close {
+                    margin: 12px 12px 0 auto;
+                    font-size: 20px;
+                }
+            }
+            &__btn {
+                margin-top: 30px;
+                gap: 9px;
+                & input, a {
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: 14px;
+                    padding: 9px 0;
+                    margin-right: 0px;
+                    width: 175px;
+                }
+                // для input 'text-transform: capitalize;' не работает
+                & a {
+                    text-transform: lowercase;
+                    &::first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+        &__order {
+            flex-direction: column;
+            &__order {
+                &__submit {
+                    margin-top: 48px;
+                    // для input 'text-transform: capitalize;' не работает
+                }
             }
         }
     }

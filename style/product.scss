@@ -1,5 +1,6 @@
 @import '../module/general';
 @import '../module/header';
+@import '../module/header_menu_full';
 @import '../module/titlePath';
 @import '../module/subscribe';
 @import '../module/footer';
@@ -49,7 +50,7 @@
     }
     &__desc {
         display: inline-block;
-        width: 555px;
+        max-width: 555px;
         font-weight: 300;
         font-size: 14px;
         line-height: 17px;
@@ -92,7 +93,7 @@
         @include text;
         position: relative;
         &:not(:last-child) {
-            margin-right: 28px;
+            margin-right: 23px;
         }
         & > summary {
             list-style: none;
@@ -212,5 +213,46 @@
                 line-height: 19px;
             }
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .info {
+        margin: 0;
+        max-width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+    .products {
+        &__box {
+            gap: 16px;
+        }
+        &__item:last-child {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 667px) {
+    .info {
+        padding: 64px 24px;
+        &__line {
+            width: 47%;
+        }
+    }
+    .products__toolbar__selector {
+        & > details {
+            & > summary {
+                font-size: 10px;
+                line-height: 12px;
+            }
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+    }
+    .products {
+        margin-top: 64px;
+        margin-bottom: 64px;
     }
 }
