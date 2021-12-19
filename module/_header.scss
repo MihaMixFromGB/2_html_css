@@ -54,20 +54,19 @@
             margin-bottom: 9px;
             & > label {
                 cursor: pointer;
-                & > div {
-                    height: 12px;
-                    & > span {
-                        display: block;
-                        width: 12px;
-                        border-top: 1px solid #6F6E6E;
-                        &:first-child {
-                            transform-origin: left;
-                            transform: rotate(45deg) scale(1.4);
-                        }
-                        &:last-child {
-                            transform-origin: right;
-                            transform:translateY(-1px) rotate(-45deg) scale(1.4);
-                        }
+                display: inline-block;
+                height: 12px;
+                & > span {
+                    display: block;
+                    width: 12px;
+                    border-top: 1px solid #6F6E6E;
+                    &:first-child {
+                        transform-origin: left;
+                        transform: rotate(45deg) scale(1.4);
+                    }
+                    &:last-child {
+                        transform-origin: right;
+                        transform:translateY(-1px) rotate(-45deg) scale(1.4);
                     }
                 }
             }

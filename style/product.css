@@ -181,26 +181,24 @@
 
 .header__menu__close > label {
   cursor: pointer;
-}
-
-.header__menu__close > label > div {
+  display: inline-block;
   height: 12px;
 }
 
-.header__menu__close > label > div > span {
+.header__menu__close > label > span {
   display: block;
   width: 12px;
   border-top: 1px solid #6F6E6E;
 }
 
-.header__menu__close > label > div > span:first-child {
+.header__menu__close > label > span:first-child {
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: rotate(45deg) scale(1.4);
           transform: rotate(45deg) scale(1.4);
 }
 
-.header__menu__close > label > div > span:last-child {
+.header__menu__close > label > span:last-child {
   -webkit-transform-origin: right;
           transform-origin: right;
   -webkit-transform: translateY(-1px) rotate(-45deg) scale(1.4);
@@ -1086,7 +1084,6 @@
 }
 
 .products__toolbar__selector > details > div > ul > li > input {
-  /* border: 1px solid #EBEBEB; */
   margin-right: 9px;
 }
 
@@ -1150,6 +1147,12 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 15px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
 }
 
 .products__item .addCart > button:hover {
@@ -1158,15 +1161,6 @@
 
 .products__item .addCart > button > img {
   margin-right: 10px;
-}
-
-.products__item .addCart > button > p {
-  font-family: 'Lato', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #FFFFFF;
 }
 
 .products__item:hover {
